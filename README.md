@@ -24,11 +24,29 @@
 1. npm start
 ```
 
-### Deployment Infos :
+### Deployment Info :
 ```
 This web app is deployed on : https://ms-samuel-tulus-betest.onrender.com
 
 1. Web-app : render.com
 2. MongoDB : cloud.mongodb.com
 3. Redis : redislabs.com
+```
+
+### Postman Collection :
+```
+Please visit folder postman-collection inside root folder to find the example requests.
+Add your own environment on postman with these variables and values :
+1. url = ms-samuel-tulus-betest.onrender.com
+2. path = /api
+3. auth = Bearer eyJhbGciOiJIUxxxxx
+For auth you can use api "LOGIN" to get the headers authorization. You need to copy the response headers authorization first.
+```
+
+### Default Credential :
+```
+You can use below login credential to get authorization :
+username = admin
+password = abcdefgh
+
 ```
