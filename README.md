@@ -23,3 +23,12 @@
 ```
 1. npm start
 ```
+
+### Deployment Infos :
+```
+This web app is deployed on : https://ms-samuel-tulus-betest.onrender.com
+
+1. Web-app : render.com
+2. MongoDB : cloud.mongodb.com
+3. Redis : redislabs.com
+```
