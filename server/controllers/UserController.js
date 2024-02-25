@@ -72,10 +72,8 @@ const getUserDetail = async (req, res) => {
         const REDIS_KEY = `User-${id}`;
 
         let result = await RedisService.getData(REDIS_KEY);
-        console.log('result redis: ', result);
         if (_.isEmpty(result)) {
             result = await User.findById(id);
-            console.log('result mongo: ', result);
             await RedisService.setData(REDIS_KEY, result);
         }
         
@@ -84,7 +82,6 @@ const getUserDetail = async (req, res) => {
         Logger.info(response);
         res.send(BaseResponse.successResponse(response));
     } catch (err) {
-        console.log('err: ', err);
         Logger.error(err);
         res.status(err.errorCode || 500).send(BaseResponse.errorResponse(err));
     }
