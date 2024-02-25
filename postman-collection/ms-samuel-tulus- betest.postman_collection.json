@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "7c9171df-8815-4e56-a075-bf77d6b5cad8",
+		"name": "ms-samuel-tulus- betest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11722379"
+	},
+	"item": [
+		{
+			"name": "GET USER LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}{{path}}/user?page=1&page_size=5",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER DETAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}{{path}}/user/65dbd160d2d3e7c708b495e1",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"user",
+						"65dbd160d2d3e7c708b495e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin2\",\r\n    \"account_number\": \"admin2\",\r\n    \"email_address\": \"admin2@admin.com\",\r\n    \"password\": \"abcdefgh2\",\r\n    \"identity_number\": \"1234567890123457\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}{{path}}/user",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"account_number\": \"admin abc\",\r\n    \"email_address\": \"admin@admin.com\",\r\n    \"password\": \"abcdefgh\",\r\n    \"identity_number\": \"1234567890123457\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}{{path}}/user/65dba0efc5ebd66e3add1c2c",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"user",
+						"65dba0efc5ebd66e3add1c2c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}{{path}}/user/65dba658040fd6f841f68d53",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"user",
+						"65dba658040fd6f841f68d53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"abcdefgh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}{{path}}/auth/login",
+					"host": [
+						"{{url}}{{path}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
